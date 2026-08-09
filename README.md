@@ -19,6 +19,8 @@ this with a Morgan-fingerprint drug encoder.
 |---|---|
 | `DATA (3).ipynb` | Data preparation and C2S cell-sentence generation |
 | `model_4.ipynb` | Model definition, training, and the Drug+Gene vs Drug-only comparison |
+| `representation_study.ipynb` | The controlled representation study: the one-hot cell-line control, identity-only, cell-line-average, shuffled-feature and constant baselines, under both the leave-pair-out and leave-cell-out splits, with the paired significance tests |
+| `model_4_one_hot.ipynb` | The same representation study without the paired tests |
 | `DATA_PLOT.ipynb` | The cell-sentence rank figures |
 | `c2s27b_out_0_4396_in300_out300 (2).rar` | The generated cell sentences (see *Data* below) |
 | `paper_analysis/` | Scripts reproducing the descriptive numbers in the paper — see [`paper_analysis/README.md`](paper_analysis/README.md) |
@@ -53,16 +55,13 @@ python paper_analysis/spearman_all.py
 python paper_analysis/regen_figs.py figures/
 ```
 
-The predictive results (cross-validation and held-out test) come from
-`model_4.ipynb`. Generating the cell sentences from scratch needs a GPU; we used
+The predictive results come from the notebooks: `model_4.ipynb` for the
+cross-validation and held-out test of Drug+Gene against Drug-only, and
+`representation_study.ipynb` for the controlled comparison of input
+representations under the leave-pair-out and leave-cell-out splits, including
+the one-hot cell-line control and the paired significance tests. Generating the cell sentences from scratch needs a GPU; we used
 an RTX 5090 with the 27B model in 4-bit NF4 precision. The released archive means
 you do not have to repeat that step.
-
-## What is not in this repository yet
-
-For transparency: the representation study reported in the paper — the one-hot
-cell-line control, the identity-only and cell-line-average baselines, and the
-leave-cell-out split — is not yet included here. It will be added.
 
 ## Requirements
 
