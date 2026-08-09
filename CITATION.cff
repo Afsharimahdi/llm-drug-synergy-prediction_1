@@ -1,0 +1,43 @@
+cff-version: 1.2.0
+title: >-
+  Differential Perturbation Encoding with a Cell Foundation Model
+  for Drug Synergy Prediction
+message: If you use this code, please cite the paper below.
+type: software
+authors:
+  - given-names: Mahdi
+    family-names: Afshari
+    email: afsharimahdi@iasbs.ac.ir
+    affiliation: Institute for Advanced Studies in Basic Sciences (IASBS)
+  - given-names: Parvin
+    family-names: Razzaghi
+    email: p.razzaghi@iasbs.ac.ir
+    affiliation: Institute for Advanced Studies in Basic Sciences (IASBS)
+  - given-names: Zahra
+    family-names: Narimani
+    email: narimani@iasbs.ac.ir
+    affiliation: Institute for Advanced Studies in Basic Sciences (IASBS)
+repository-code: >-
+  https://github.com/Afsharimahdi/llm-drug-synergy-prediction_1
+license: MIT
+keywords:
+  - drug synergy prediction
+  - drug combination
+  - cell foundation model
+  - Cell2Sentence
+  - perturbation response
+  - shortcut learning
+# TODO: fill in journal, year, volume, pages and DOI once the paper is accepted.
+preferred-citation:
+  type: article
+  title: >-
+    Differential Perturbation Encoding with a Cell Foundation Model
+    for Drug Synergy Prediction
+  authors:
+    - given-names: Mahdi
+      family-names: Afshari
+    - given-names: Parvin
+      family-names: Razzaghi
+    - given-names: Zahra
+      family-names: Narimani
+  year: 2026
