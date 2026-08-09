@@ -12,10 +12,12 @@ these generated responses (differential perturbation encoding). A gated fusion
 transformer then combines this with a Morgan-fingerprint drug encoder.
 
 ## Repository contents
-- `DATA__3_.ipynb` — data preparation and C2S cell-sentence generation
-- `model_4.ipynb` — model definition and training
-- `leave_cell_out_eval.py` — leave-cell-out evaluation (Drug+Gene vs Drug-only)
-- `multiseed_delong_eval.py` — multi-seed + DeLong significance evaluation
+- `DATA (3).ipynb` — data preparation and C2S cell-sentence generation
+- `DATA_PLOT.ipynb` — the cell-sentence rank figures
+- `model_4.ipynb` — model definition, training and evaluation
+- `c2s27b_out_0_4396_in300_out300 (2).rar` — the generated cell sentences
+- `paper_analysis/` — scripts reproducing the descriptive numbers in the paper
+  (see `paper_analysis/README.md`)
 
 ## Data
 - Synergy labels: DrugCombDB (https://doi.org/10.1093/nar/gkz1007)
