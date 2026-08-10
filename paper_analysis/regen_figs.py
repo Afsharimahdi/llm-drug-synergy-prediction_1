@@ -31,7 +31,7 @@ print("genes common to all four stages:", len(common))
 plt.figure(figsize=(12, 8))
 for g in common:
     plt.plot(stages, [l.index(g) + 1 for l in lists], marker="o", alpha=0.3, linewidth=1)
-plt.xlabel("Treatment Stage", fontsize=14, fontweight="bold")
+plt.xlabel("Condition", fontsize=14, fontweight="bold")
 plt.ylabel("Gene Expression Rank", fontsize=14, fontweight="bold")
 plt.title(f"Gene Expression Rank Changes for Cell line {cell_name}",
           fontsize=16, fontweight="bold")
@@ -44,7 +44,7 @@ top = sorted(changes.items(), key=lambda x: abs(x[1][-1] - x[1][0]), reverse=Tru
 plt.figure(figsize=(14, 8))
 for g, ranks in top:
     plt.plot(stages, ranks, marker="o", linewidth=2, label=g, alpha=0.7)
-plt.xlabel("Treatment Stage", fontsize=14, fontweight="bold")
+plt.xlabel("Condition", fontsize=14, fontweight="bold")
 plt.ylabel("Gene Expression Rank", fontsize=14, fontweight="bold")
 plt.title(f"Top 20 Genes with Largest Rank Changes (Cell line {cell_name})",
           fontsize=16, fontweight="bold")
@@ -62,7 +62,7 @@ sns.heatmap(top30[stages], cmap="RdYlGn_r", annot=True, fmt="d",
             cbar_kws={"label": "Expression Rank"}, linewidths=0.5)
 plt.title(f"Top 30 Genes - Expression Rank Changes (Cell line {cell_name})",
           fontsize=14, fontweight="bold", pad=15)
-plt.xlabel("Treatment Stage", fontsize=12, fontweight="bold")
+plt.xlabel("Condition", fontsize=12, fontweight="bold")
 plt.ylabel("Genes", fontsize=12, fontweight="bold")
 plt.tight_layout()
 plt.savefig(f"{OUT}/rank_heatmap.png", dpi=300); plt.close()
